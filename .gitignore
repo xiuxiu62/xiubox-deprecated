@@ -1,8 +1,3 @@
-<<<<<<< HEAD
 .git
-node_modules
-
-=======
-scripts
-.ops/
->>>>>>> f9b18aa7223ed146e83b782b50ba72e42f77017b
+.ops
+temp/node_modules
