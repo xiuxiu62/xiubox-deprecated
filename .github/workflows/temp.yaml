@@ -20,7 +20,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 14
-
+    
     - name: Install dependencies
       working-directory: ./temp
       run: npm ci

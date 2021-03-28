@@ -8,6 +8,7 @@
   },
   "scripts": {
     "start": "sudo pm2 start index.js",
+    "dev": "node index.js",
     "restart": "sudo pm2 restart index.js",
     "stop": "sudo pm2 stop index.js"
   }
