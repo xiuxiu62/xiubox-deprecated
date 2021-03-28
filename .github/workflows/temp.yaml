@@ -3,8 +3,8 @@ on:
   push:
     branches:
       - main
-    paths:
-      - temp/src/**
+        #    paths:
+        # - temp/src/**
     
 jobs:
   build:
@@ -19,7 +19,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 14
-          #yarn: 1.22.4
 
       - name: Restart server
-        run: cd temp && yarn && yarn restart
+        run: cd temp && yarn && yarn start
