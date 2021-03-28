@@ -4,11 +4,11 @@ on:
     branches:
       - main
     paths:
-      - client/src/**
+      - "client/src/**"
 
 jobs:
   build:
-    name: Build & Deploy
+    name: Deploy
     runs-on: self-hosted
     environment: /var/www
     
@@ -22,10 +22,9 @@ jobs:
     #     node-version: 14
 
     # - name: Install dependencies
-    #   working-directory: ./client
+    #   working-directory: ./temp
     #   run: npm ci
     
     # - name: Deploy
-    #   working-directory: ./client
+    #   working-directory: ./temp
     #   run: npm run start --if-present
-        
