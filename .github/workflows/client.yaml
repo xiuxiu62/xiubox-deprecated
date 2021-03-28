@@ -1,0 +1,28 @@
+name: Client
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: Build & Deploy
+    runs-on: self-hosted
+    environment: /var/www
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    
+    # - name: Install Node
+    #   uses: actions/setup-node@v1
+    #   with:
+    #     node-version: 14
+
+    # - name: Install dependencies
+    #   working-directory: ./client
+    #   run: npm ci
+    
+    # - name: Deploy
+    #   working-directory: ./client
+    #   run: npm run start --if-present
+        
