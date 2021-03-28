@@ -22,4 +22,4 @@ jobs:
           yarn: 1.22.4
 
       - name: Restart server
-        run: cd temp && yarn && yarn restart
+        run: cd temp && yarn && yarn start
