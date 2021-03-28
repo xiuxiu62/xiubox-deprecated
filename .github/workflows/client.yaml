@@ -1,7 +1,10 @@
 name: Client
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
+    paths:
+      - client/src/**
 
 jobs:
   build:
