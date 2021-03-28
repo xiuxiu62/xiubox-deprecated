@@ -21,4 +21,4 @@ jobs:
           node-version: 14
 
       - name: Restart server
-        run: cd temp && yarn && yarn start
+        run: cd temp && yarn && yarn restart
