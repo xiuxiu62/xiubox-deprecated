@@ -22,7 +22,7 @@ jobs:
           yarn: 1.22.4
 
       - name: Change into project directory
-        run: cd /var/www/xiubox
+        run: cd xiubox
       
       - name: Pull updates
         run: git pull origin main
