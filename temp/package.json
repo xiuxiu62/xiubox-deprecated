@@ -7,9 +7,9 @@
     "express": "^4.17.1"
   },
   "scripts": {
-    "start": "sudo pm2 start index.js",
+    "start": "pm2 start index.js",
     "dev": "node index.js",
-    "restart": "sudo pm2 restart index.js",
-    "stop": "sudo pm2 stop index.js"
+    "restart": "pm2 restart index.js",
+    "stop": "pm2 stop index.js"
   }
 }
