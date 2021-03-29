@@ -8,7 +8,7 @@ const fs = require('fs');
 
 const app = express();
 
-const httpOptions = { port: 4000 }
+const httpOptions = { port: 3000 }
 // const httpsOptions = {
 //   port: 3443,
 //   ssl: {
