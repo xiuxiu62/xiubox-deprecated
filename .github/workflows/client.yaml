@@ -4,27 +4,21 @@ on:
     branches:
       - main
     paths:
-      - "client/src/**"
-
+      - client/src/**
+    
 jobs:
   build:
     name: Deploy
     runs-on: self-hosted
-    environment: /var/www
     
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
     
-    # - name: Install Node
-    #   uses: actions/setup-node@v1
-    #   with:
-    #     node-version: 14
+      # - name: Install node
+      #   uses: actions/setup-node@v1
+      #   with:
+      #     node-version: 14
 
-    # - name: Install dependencies
-    #   working-directory: ./temp
-    #   run: npm ci
-    
-    # - name: Deploy
-    #   working-directory: ./temp
-    #   run: npm run start --if-present
+      # - name: Restart server
+      #   run: cd temp && yarn && yarn restart

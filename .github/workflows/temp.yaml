@@ -1,4 +1,4 @@
-name: Temporary Client
+name: Temporary client
 on:
   push:
     branches:
@@ -15,7 +15,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
     
-      - name: Install node and yarn
+      - name: Install node
         uses: actions/setup-node@v1
         with:
           node-version: 14

@@ -1,17 +1,22 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { ChakraProvider, extendTheme, Center } from '@chakra-ui/react';
+import { Box, ChakraProvider, ColorModeScript } from '@chakra-ui/react';
 
-const colors = {
-	primary: {
-		black: '#222222',
-		white: '#dddddd',
-	},
+import { NavBar, Temp, Footer } from './components';
+import { theme } from './theme';
+
+const Home: React.FC = () => {
+	return (
+		<Box>
+			<NavBar />
+			<Temp />
+			<Footer />
+		</Box>
+	);
 };
 
-const Home: React.FC = () => <Center>Home Page</Center>;
-
 const Main: React.FC = () => (
-	<ChakraProvider theme={extendTheme({ colors })}>
+	<ChakraProvider>
+		<ColorModeScript initialColorMode={theme.config.initialColorMode} />
 		<Router>
 			<Switch>
 				<Route path="/" exact component={Home} />
