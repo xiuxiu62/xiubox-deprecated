@@ -9,6 +9,7 @@ import {
 	Typography,
 } from '@material-ui/core';
 import { item, TodoListView } from './view';
+import { v4 as uuid } from 'uuid';
 
 const TodoPage = () => {
 	const [items, setItems]: [Array<item>, any] = useState([]);
@@ -26,10 +27,8 @@ const TodoPage = () => {
 	 */
 	const add = (val: string) => {
 		let copy: Array<item> = items;
-		const len: number = items.length;
-		const id: number = len > 0 ? items[len].id + 1 : 1;
 		const newItem: item = {
-			id: id,
+			id: uuid(),
 			value: val,
 			checked: false,
 		};
@@ -41,7 +40,7 @@ const TodoPage = () => {
 	 * Take an item and removes it from items, if it exists
 	 * @param id - Id of the item to be removed
 	 */
-	const remove = (id: number) => {
+	const remove = (id: string) => {
 		let updated: Array<item> = items.filter((item) => item.id !== id);
 		update(updated);
 	};
@@ -56,7 +55,7 @@ const TodoPage = () => {
 	 * Removes an item by id
 	 * @param id - Item id
 	 */
-	const removeHandler = (id: number) => remove(id);
+	const removeHandler = (id: string) => remove(id);
 
 	/**
 	 * Appends a new item to items

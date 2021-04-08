@@ -14,7 +14,6 @@ export const Logo: React.FC = (props: React.SVGProps<SVGSVGElement>) => (
 		</metadata>
 		<g
 			transform="translate(1.000000,39.000000) scale(0.100000,-0.100000)"
-			fill="#DDDDDD"
 			stroke="none"
 		>
 			<path d="M1785 348 c-53 -151 -115 -332 -115 -339 0 -23 29 -5 40 24 47 133 110 317 110 322 0 11 -31 4 -35 -7z" />

@@ -3,7 +3,7 @@ import { CloseOutlined } from '@material-ui/icons';
 import { useState } from 'react';
 
 type item = {
-	id: number;
+	id: string;
 	value: string;
 	checked: boolean;
 };
@@ -23,9 +23,7 @@ const TodoView = (props: { item: item; removeHandler: any }) => {
 			style={{ marginTop: '0.5rem' }}
 		>
 			<Checkbox checked={checked} onChange={changeHandler} />
-			<Box>
-				{item.value} : {item.id}
-			</Box>
+			<Box>{item.value}</Box>
 			<Button
 				style={{ alignSelf: 'right' }}
 				onClick={() => removeHandler(item.id)}
