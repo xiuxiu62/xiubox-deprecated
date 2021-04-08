@@ -46,11 +46,22 @@ const TodoPage = () => {
 		update(updated);
 	};
 
-	// Event handlers
-	const changeHandler = (i: string) => setValue(i);
+	/**
+	 * Updates text form field
+	 * @param val - Value to update the local state
+	 */
+	const changeHandler = (val: string) => setValue(val);
 
+	/**
+	 * Removes an item by id
+	 * @param id - Item id
+	 */
 	const removeHandler = (id: number) => remove(id);
 
+	/**
+	 * Appends a new item to items
+	 * @param val - Value to of the item being created
+	 */
 	const submissionHandler = (i: string) => {
 		if (i !== '') {
 			add(i);

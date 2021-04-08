@@ -2,12 +2,12 @@ import {
 	AppBar,
 	Toolbar,
 	IconButton,
-	Typography,
 	Button,
 	Grid,
 	Link,
+	Box,
 } from '@material-ui/core';
-import { MenuIcon } from '../svgs';
+import { Logo, MenuIcon } from '../svgs';
 
 const NavLink = (props: { to: string; children: any }) => {
 	const { to, children } = props;
@@ -63,6 +63,7 @@ const RedirectButtons = () => {
 
 //TODO: move into api client
 const ensureAuthenticated = (): boolean => false;
+
 const AuthenticationButton = () => {
 	const authenticated: boolean = ensureAuthenticated();
 
@@ -90,17 +91,9 @@ const NavBar = () => (
 				<IconButton edge="start" color="inherit" aria-label="menu">
 					<MenuIcon />
 				</IconButton>
-				<NavLink
-					to="/"
-					children={
-						<Typography
-							variant="h6"
-							style={{ paddingLeft: '1rem' }}
-						>
-							Book Store
-						</Typography>
-					}
-				/>
+				<Box style={{ marginLeft: '1rem' }}>
+					<NavLink to="/" children={<Logo />} />
+				</Box>
 			</Grid>
 			<Grid container justify="center">
 				<RedirectButtons />
