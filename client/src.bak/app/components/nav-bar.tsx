@@ -1,6 +1,6 @@
 import { Box, Flex, Link, Stack, Text } from '@chakra-ui/react';
 import { useState } from 'react';
-import { MenuIcon, CloseIcon, Logo } from '../svgs';
+import { MenuIcon, CloseIcon } from '../svgs';
 
 const MenuToggle = (props: { toggle: any; isOpen: boolean }) => {
 	const { toggle, isOpen } = props;
