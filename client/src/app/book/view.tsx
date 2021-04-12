@@ -1,6 +1,6 @@
 import { Box, Button, Grid } from '@material-ui/core';
 import { CloseOutlined } from '@material-ui/icons';
-import { book } from 'src/app/shared/api_client/book';
+import { book } from 'src/shared/api_client/book';
 
 const BookListView = (props: { books: Array<book>; removeHandler: any }) => {
 	const { books, removeHandler } = props;

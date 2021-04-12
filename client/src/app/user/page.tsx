@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Box, Button, Card, Grid, Input, Typography } from '@material-ui/core';
 import { UserListView } from './view';
-import { user } from 'src/app/shared/api_client/user';
-import * as UserService from 'src/app/shared/api_client/user';
+import { user } from 'src/shared/api_client/user';
+import * as UserService from 'src/shared/api_client/user';
 
 const UserPage = () => {
 	const [users, setUsers]: [Array<user>, any] = useState([]);

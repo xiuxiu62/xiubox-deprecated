@@ -1,10 +1,11 @@
 import { Box } from '@material-ui/core';
-import { NavBar } from '../components';
+import { Header, Footer } from '../components';
 
 const PageWrapper: React.FC = ({ children }) => (
 	<Box width="100%" height="100%">
-		<NavBar />
+		<Header />
 		{children}
+		<Footer />
 	</Box>
 );
 

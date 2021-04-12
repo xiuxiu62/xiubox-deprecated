@@ -1,13 +1,14 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { ThemeProvider } from '@material-ui/core';
 
-import { theme } from './shared/theme';
-import { HomePage, BookPage, UserPage, TodoPage, NotFoundPage } from './pages';
-import { NavBar } from './shared/components';
+import { theme } from '../shared/theme';
+import { HomePage, BookPage, UserPage, TodoPage, NotFoundPage } from '.';
+// import { PageWrapper } from 'src/shared/wrappers';
+import { Footer, Header } from 'src/shared/components';
 
 const Main: React.FC = () => (
 	<ThemeProvider theme={theme}>
-		<NavBar />
+		<Header />
 		<Router>
 			<Switch>
 				<Route path="/" exact component={HomePage} />
@@ -17,6 +18,7 @@ const Main: React.FC = () => (
 				<Route path="*" exact component={NotFoundPage} />
 			</Switch>
 		</Router>
+		<Footer />
 	</ThemeProvider>
 );
 

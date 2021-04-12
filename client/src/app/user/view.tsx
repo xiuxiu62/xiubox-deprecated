@@ -1,6 +1,6 @@
 import { Box, Button, Grid } from '@material-ui/core';
 import { CloseOutlined } from '@material-ui/icons';
-import { user } from 'src/app/shared/api_client/user';
+import { user } from 'src/shared/api_client/user';
 
 const UserListView = (props: { users: Array<user>; removeHandler: any }) => {
 	const { users, removeHandler } = props;

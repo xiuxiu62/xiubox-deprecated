@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Box, Button, Card, Grid, Input, Typography } from '@material-ui/core';
 import { BookListView } from './view';
-import { book } from 'src/app/shared/api_client/book';
-import * as BookService from 'src/app/shared/api_client/book';
+import { book } from 'src/shared/api_client/book';
+import * as BookService from 'src/shared/api_client/book';
 
 const BookPage = () => {
 	const [books, setBooks]: [Array<book>, any] = useState([]);

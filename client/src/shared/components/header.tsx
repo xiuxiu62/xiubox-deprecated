@@ -84,7 +84,7 @@ const AuthenticationButton = () => {
 	);
 };
 
-const NavBar = () => (
+const Header = () => (
 	<AppBar position="static" color="secondary">
 		<Toolbar>
 			<Grid container justify="flex-start" alignItems="center">
@@ -105,4 +105,4 @@ const NavBar = () => (
 	</AppBar>
 );
 
-export { NavBar };
+export { Header };
