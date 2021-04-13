@@ -1,10 +1,11 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { ThemeProvider } from '@material-ui/core';
 
-import { theme } from '../shared/theme';
-import { HomePage, BookPage, UserPage, TodoPage, NotFoundPage } from '.';
-
+import { HomePage } from './home.page';
+import { NotFoundPage } from './404.page';
+import { BookPage, UserPage, TodoPage } from './forms';
 import { Header, Footer } from 'src/shared/components';
+import { theme } from '../shared/theme';
 
 const Main: React.FC = () => (
 	<ThemeProvider theme={theme}>
